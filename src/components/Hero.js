@@ -127,7 +127,7 @@ const Hero = () => {
                     >
                         A spoiler-safe fan page
                     </motion.p>
-                    <Link to="/homepage">
+                    <Link to="/home">
                     <Button
                         className='button'
                         whileHover={{ scale: 1.05 }}
