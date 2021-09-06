@@ -36,7 +36,7 @@ const header = () => {
     <Navbar>
         <Logo to="/">Welcome</Logo>
         <NavItems>
-            <NavbarLink to="/">Home</NavbarLink>
+            <NavbarLink to="/home">Home</NavbarLink>
             <NavbarLink to="/about">About</NavbarLink>
             <NavbarLink to="/discussion">Discussion</NavbarLink>
         </NavItems>
