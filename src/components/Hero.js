@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Particles from 'react-particles-js';
+import { motion } from 'framer-motion';
 
 const Section = styled.section`
     display: flex;
@@ -20,7 +21,7 @@ grid-template-columns: 1fr 1fr;
 
 `;
 
-const Card = styled.div`
+const Card =  styled(motion.div)`
 color: #fff;
 padding: 2rem;
 backdrop-filter: blur(5px);
@@ -57,18 +58,33 @@ const Hero = ({ title, desc }) => {
         <Section>
               <Particles id="particles-js"
                 params={
-                {"particles":{"number":{"value":178,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"","width":110,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"resize":true},"modes":{"grab":{"distance":1126.873126873127,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}
+                {
+                    "particles":{"number":{"value":178,"density":{"enable":true,"value_area":800}},
+                    "color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"","width":110,"height":100}},
+                    "opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},
+                    "size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},
+                    "line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},
+                    "interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"resize":true},"modes":{"grab":{"distance":1126.873126873127,"line_linked":{"opacity":1}},
+                    "bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},
+                    "retina_detect":true
+                }
             }    
         />
         <Container>
-            <Card>
-          
+            <Card
+                className="MiniSeries"
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            >
                 <h1>{title}</h1>
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
-            <Card>
-          
+            <Card
+               className="Season1"
+               initial={{ opacity: 0, x: -100 }}
+               animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            >
                 <h1>{title}</h1>
                 <p>{desc}</p>
                 <button>learn more</button>
