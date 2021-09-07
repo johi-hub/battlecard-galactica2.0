@@ -28,6 +28,7 @@ backdrop-filter: blur(5px);
 background-color: rgba(240, 52, 52, 1);
 margin: 2rem;
 border-radius: 5px;
+position: absolute;
 
 
 h1 {
@@ -53,6 +54,33 @@ button {
 
 `;
 
+const ColumnRight = styled.div`
+display: flex;
+justify content: center;
+align-items: center;
+padding: 2rem;
+position: relative;
+
+${Card}:nth-child(1) {
+    top: -1rem;
+    left: 20rem;
+}
+${Card}:nth-child(2) {
+    top: 17rem;
+    left: 40rem;
+}
+
+${Card}:nth-child(3) {
+    top: 17rem;
+    left: 1rem;
+}
+
+${Card}:nth-child(4) {
+    top: 34.5rem;
+    left: 20rem;
+}
+`;
+
 const Hero = ({ title, desc }) => {
     return (
         <Section>
@@ -71,8 +99,9 @@ const Hero = ({ title, desc }) => {
             }    
         />
         <Container>
+        <ColumnRight>
             <Card
-                className="MiniSeries"
+                className="Season1"
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
             >
@@ -81,7 +110,7 @@ const Hero = ({ title, desc }) => {
                 <button>learn more</button>
             </Card>
             <Card
-               className="Season1"
+               className="Season2"
                initial={{ opacity: 0, x: -100 }}
                animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
             >
@@ -89,24 +118,34 @@ const Hero = ({ title, desc }) => {
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
-            <Card>
-          
+            <Card
+               className="Season3"
+               initial={{ opacity: 0, x: -100 }}
+               animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            >
                 <h1>{title}</h1>
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
-            <Card>
-          
+            <Card
+               className="Season4"
+               initial={{ opacity: 0, x: -100 }}
+               animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            >
                 <h1>{title}</h1>
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
-            <Card>
-          
+            <Card
+               className="MiniSeries"
+               initial={{ opacity: 0, x: -100 }}
+               animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            >
                 <h1>{title}</h1>
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
+            </ColumnRight>
             </Container>
         </Section>
     )
