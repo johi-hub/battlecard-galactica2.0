@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Navbar = styled.nav`
-    height: 60px;
+    height: 8vh;
     background: #000;
-    padding: 0rem calc((100vw - 1300px) / 2);
+    padding: 0rem calc((100vw - 1800px) / 2);
     display: flex;
     justify-content: space-between;
     align-items: center;
