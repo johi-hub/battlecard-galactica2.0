@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <>
             <Header />
-            <Hero />
+            <Hero title='Mini Series' desc='whatever'/>
         </>
     )
 }
