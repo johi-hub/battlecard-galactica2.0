@@ -19,17 +19,6 @@ const Section = styled.section`
 
 `;
 
-const Container = styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr;
-
-@media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-}
-
-`;
-
-
 const Card =  styled(motion.div)`
 color: #fff;
 padding: 2rem;
@@ -69,15 +58,13 @@ button {
     outline: none;
     visibility: hidden;
 }
-
-
 `;
 
-const ColumnLeft = styled.div`
-display: flex;
+const Container = styled.div`
+display: grid;
+grid-template-columns: 1fr 1fr;
 justify-content: center;
 position: relative;
-
 
 ${Card}:nth-child(1) {
     top: 17rem;
@@ -93,34 +80,31 @@ ${Card}:nth-child(2) {
     background-size: cover;
 }
 
-`;
+@media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+}
 
-const ColumnRight = styled.div`
-display: flex;
-justify-content: center;
-position: relative;
-
-${Card}:nth-child(1) {
+${Card}:nth-child(3) {
     top: -1rem;
     left: 20rem;
     background-image: url(${SeasonOne});
     background-size: cover;
 }
-${Card}:nth-child(2) {
+${Card}:nth-child(4) {
     top: 17rem;
     left: 40rem;
     background-image: url(${SeasonTwo});
     background-size: cover;
 }
 
-${Card}:nth-child(3) {
+${Card}:nth-child(5) {
     top: 17rem;
     left: 1rem;
     background-image: url(${SeasonThree});
     background-size: cover;
 }
 
-${Card}:nth-child(4) {
+${Card}:nth-child(6) {
     top: 34.5rem;
     left: 20rem;
     background-image: url(${SeasonFour});
@@ -144,9 +128,9 @@ const Hero = ({ title, desc }) => {
                     "retina_detect":true
                 }
             }    
-        />
+                />
         <Container>
-        <ColumnLeft>
+        
         <Card
                className="MiniSeries"
                initial={{ opacity: 0, x: -100 }}
@@ -171,8 +155,6 @@ const Hero = ({ title, desc }) => {
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
-        </ColumnLeft>
-        <ColumnRight>
             <Card
                 className="Season1"
                 initial={{ opacity: 0, x: -100 }}
@@ -221,8 +203,6 @@ const Hero = ({ title, desc }) => {
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
-            
-            </ColumnRight>
             </Container>
         </Section>
     )
