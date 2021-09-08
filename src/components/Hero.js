@@ -2,6 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import Particles from 'react-particles-js';
 import { motion } from 'framer-motion';
+import SeasonOne from '../images/season-1.jpg';
+import SeasonTwo from '../images/season-2.jpg';
+import SeasonThree from '../images/season-3.jpg';
+import SeasonFour from '../images/season-4.jpg';
+import MiniSeries from '../images/miniseries.jpg';
+import Razor from '../images/razor.jpg';
+import '../scss/sections/_hero.scss';
+
 
 const Section = styled.section`
     display: flex;
@@ -21,63 +29,102 @@ grid-template-columns: 1fr 1fr;
 
 `;
 
+
 const Card =  styled(motion.div)`
 color: #fff;
 padding: 2rem;
 backdrop-filter: blur(5px);
-background-color: rgba(240, 52, 52, 1);
+background-color: rgba(0, 0, 0, 0.4);
 margin: 2rem;
 border-radius: 5px;
 position: absolute;
+background-position-x: center;
+:hover{
+    h1, p, button{ 
+        visibility: visible 
+    }
+}
 
 
 h1 {
-    font-size: clamp(1rem, 8vw, 2.5rem);
+    font-size: clamp(1rem, 8vw, 1.5rem);
     margin-bottom: 0.5rem;
+    visibility: hidden;
 }
 
 p {
-    font-size: clamp(1rem, 6vw, 2.5rem);
+    font-size: clamp(1rem, 6vw, 0.5rem);
     margin-bottom: 1rem;
+    visibility: hidden;
 }
 
 button {
-    font-size: clamp(0.8rem, 4vw, 1.2rem);
-    padding: 0.8rem 2rem;
+    font-size: clamp(0.8rem, 4vw, 1.1rem);
+    padding: 0.8rem 4rem;
     color: #000;
     background: linear-gradient(to right, #ffcc33, #ffb347);
     border: none;
     border-radius: 4px;
     cursor: pointer;
     outline: none;
+    visibility: hidden;
+}
+
+
+`;
+
+const ColumnLeft = styled.div`
+display: flex;
+justify-content: center;
+position: relative;
+
+
+${Card}:nth-child(1) {
+    top: 17rem;
+    right: 40rem;
+    background-image: url(${MiniSeries});
+    background-size: cover;
+}
+
+${Card}:nth-child(2) {
+    top: 17rem;
+    right: 20rem;
+    background-image: url(${Razor});
+    background-size: cover;
 }
 
 `;
 
 const ColumnRight = styled.div`
 display: flex;
-justify content: center;
-align-items: center;
-padding: 2rem;
+justify-content: center;
 position: relative;
 
 ${Card}:nth-child(1) {
     top: -1rem;
     left: 20rem;
+    background-image: url(${SeasonOne});
+    background-size: cover;
 }
 ${Card}:nth-child(2) {
     top: 17rem;
     left: 40rem;
+    background-image: url(${SeasonTwo});
+    background-size: cover;
 }
 
 ${Card}:nth-child(3) {
     top: 17rem;
     left: 1rem;
+    background-image: url(${SeasonThree});
+    background-size: cover;
 }
 
 ${Card}:nth-child(4) {
     top: 34.5rem;
     left: 20rem;
+    background-image: url(${SeasonFour});
+    background-size: cover;
 }
 `;
 
@@ -99,22 +146,54 @@ const Hero = ({ title, desc }) => {
             }    
         />
         <Container>
+        <ColumnLeft>
+        <Card
+               className="MiniSeries"
+               initial={{ opacity: 0, x: -100 }}
+               animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+               whileHover={{ 
+                backgroundImage: 'none', 
+             }}
+            > 
+                <h1>Mini Series</h1>
+                <p>{desc}</p>
+                <button>learn more</button>
+            </Card>
+            <Card
+               className="Razor"
+               initial={{ opacity: 0, x: -100 }}
+               animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+               whileHover={{ 
+                backgroundImage: 'none', 
+             }}
+            >
+                <h1>Razor</h1>
+                <p>{desc}</p>
+                <button>learn more</button>
+            </Card>
+        </ColumnLeft>
         <ColumnRight>
             <Card
                 className="Season1"
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+                whileHover={{ 
+                    backgroundImage: 'none', 
+                 }}
             >
-                <h1>{title}</h1>
+                <h1>Season 1</h1>
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
-            <Card
+            <Card 
                className="Season2"
                initial={{ opacity: 0, x: -100 }}
                animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+               whileHover={{ 
+                backgroundImage: 'none', 
+             }}
             >
-                <h1>{title}</h1>
+                <h1>Season 2</h1>
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
@@ -122,8 +201,11 @@ const Hero = ({ title, desc }) => {
                className="Season3"
                initial={{ opacity: 0, x: -100 }}
                animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+               whileHover={{ 
+                backgroundImage: 'none', 
+             }}
             >
-                <h1>{title}</h1>
+                <h1>Season 3</h1>
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
@@ -131,20 +213,15 @@ const Hero = ({ title, desc }) => {
                className="Season4"
                initial={{ opacity: 0, x: -100 }}
                animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+               whileHover={{ 
+                backgroundImage: 'none', 
+             }}
             >
-                <h1>{title}</h1>
+                <h1>Season 4</h1>
                 <p>{desc}</p>
                 <button>learn more</button>
             </Card>
-            <Card
-               className="MiniSeries"
-               initial={{ opacity: 0, x: -100 }}
-               animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
-            >
-                <h1>{title}</h1>
-                <p>{desc}</p>
-                <button>learn more</button>
-            </Card>
+            
             </ColumnRight>
             </Container>
         </Section>

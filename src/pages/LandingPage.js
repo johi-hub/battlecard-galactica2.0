@@ -148,6 +148,7 @@ const Hero = () => {
                     <Image
                         src={BattleshipOne}
                         alt='battleship'
+                        className='battleship'
                         whileTap={{ scale: 0.9 }}
                         drag={true}
                         dragConstraints={{ left: -250, right: 250, top: 0, bottom: 50 }}
@@ -157,6 +158,7 @@ const Hero = () => {
                     <Image
                         src={BattleshipTwo}
                         alt='battleship'
+                        className='battleship'
                         whileTap={{ scale: 0.6 }}
                         drag={true}
                         dragConstraints={{ left: -350, right: 0, top: -200, bottom: 0 }}
@@ -166,6 +168,7 @@ const Hero = () => {
                     <Image
                         src={BattleshipThree}
                         alt='battleship'
+                        className='battleship'
                         whileTap={{ scale: 0.8 }}
                         drag={true}
                         dragConstraints={{ left: -250, right: 250, top: 0, bottom: 0 }}
@@ -175,6 +178,7 @@ const Hero = () => {
                     <Image
                         src={BattleshipFour}
                         alt='battleship'
+                        className='battleship'
                         whileTap={{ scale: 0.9 }}
                         drag={true}
                         dragConstraints={{ left: -250, right: 50, top: -250, bottom: 0 }}
