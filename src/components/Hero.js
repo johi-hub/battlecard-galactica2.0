@@ -67,15 +67,15 @@ justify-content: center;
 position: relative;
 
 ${Card}:nth-child(1) {
-    top: 17rem;
-    right: 40rem;
+    top: 11rem;
+    right: 12rem;
     background-image: url(${MiniSeries});
     background-size: cover;
 }
 
 ${Card}:nth-child(2) {
-    top: 17rem;
-    right: 20rem;
+    top: 25rem;
+    left: 11rem;
     background-image: url(${Razor});
     background-size: cover;
 }
@@ -85,28 +85,28 @@ ${Card}:nth-child(2) {
 }
 
 ${Card}:nth-child(3) {
-    top: -1rem;
-    left: 20rem;
+    top: -2rem;
+    left: -10rem;
     background-image: url(${SeasonOne});
     background-size: cover;
 }
 ${Card}:nth-child(4) {
-    top: 17rem;
-    left: 40rem;
+    top: 11rem;
+    left: 11rem;
     background-image: url(${SeasonTwo});
     background-size: cover;
 }
 
 ${Card}:nth-child(5) {
-    top: 17rem;
-    left: 1rem;
+    right: 12rem;
+    top: 25rem;
     background-image: url(${SeasonThree});
     background-size: cover;
 }
 
 ${Card}:nth-child(6) {
-    top: 34.5rem;
-    left: 20rem;
+    top: 38rem;
+    left: -10rem;
     background-image: url(${SeasonFour});
     background-size: cover;
 }
