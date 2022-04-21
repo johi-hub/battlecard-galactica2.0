@@ -6,7 +6,7 @@ import BattleshipTwo from '../images/battleship-2.png';
 import BattleshipThree from '../images/battleship-3.png';
 import BattleshipFour from '../images/battleship-4.png';
 import '../scss/sections/_landingpage.scss';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import { Link } from 'react-router-dom'
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Particles from 'react-particles-js';
+import Particles from 'react-tsparticles';
 import { motion } from 'framer-motion';
 import SeasonOne from '../images/season-1.jpg';
 import SeasonTwo from '../images/season-2.jpg';
